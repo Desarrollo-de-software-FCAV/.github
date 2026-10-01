@@ -2,12 +2,13 @@
 
 # Área de Desarrollo — FCAV
 
-**Facultad de Contabilidad y Administración**
-Desarrollo y operación de los sistemas web institucionales
+**Facultad de Comercio y Administración Victoria · UAT**
+Desarrollo, operación y soporte de los sistemas web institucionales
 
-[![Sistemas](https://img.shields.io/badge/sistemas-38-2563eb?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
+[![Sistemas](https://img.shields.io/badge/sistemas-38-2563eb?style=flat-square)](https://fcav.uat.edu.mx)
 [![Servidores](https://img.shields.io/badge/servidores-6-2563eb?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
 [![Repos](https://img.shields.io/badge/repos-12-0ea5e9?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
+[![Sitio](https://img.shields.io/badge/sitio-fcav.uat.edu.mx-14b8a6?style=flat-square)](https://fcav.uat.edu.mx)
 
 </div>
 
@@ -15,25 +16,34 @@ Desarrollo y operación de los sistemas web institucionales
 
 ## Qué hacemos
 
-Mantenemos los sistemas web que usan la comunidad universitaria: portal institucional,
-plataformas de inscripción, control escolar, biblioteca, almacén, y el asistente virtual
-**CALI** con búsqueda semántica sobre la normativa de la facultad.
+Somos el área que construye y mantiene los sistemas que usa a diario la comunidad de la
+facultad: portal institucional, inscripciones y control escolar, biblioteca, almacén,
+bolsa de trabajo, constancias, laboratorios y el asistente virtual **CALI**, que responde
+consultas sobre la normativa de la facultad.
 
-Trabajamos sobre infraestructura **Windows Server con IIS**, con un nodo dedicado a
-procesamiento de lenguaje natural.
+Operamos sobre **Windows Server con IIS**, con un nodo dedicado a inteligencia artificial.
 
 ---
 
+## Arquitectura de la infraestructura
+
 <div align="center">
 
-## Arquitectura de la infraestructura
+![Arquitectura de la infraestructura del área de desarrollo](./diagrama-infraestructura.png)
 
 </div>
 
-![Diagrama de la infraestructura del área de desarrollo](./diagrama-infraestructura.png)
+<sub>Verificada por inspección directa de los servidores en octubre de 2026. Por seguridad
+no se publican direcciones IP, nombres de host ni credenciales. [Ver en vector (SVG)](https://github.com/Desarrollo-de-software-FCAV/.github/blob/main/profile/diagrama-infraestructura.svg).</sub>
 
-<sub>Arquitectura verificada por inspección directa de los servidores en octubre de 2026.
-Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
+**Cómo leerla:**
+
+| Capa | Qué contiene |
+|---|---|
+| **Quién usa los sistemas** | Comunidad (web y móvil), kioscos de campus, asistente CALI y el propio equipo vía Discord |
+| **Plataforma** | Producción web (15 apps), intranet y APIs (23 apps), nodo de IA y bot de operaciones |
+| **Datos y apoyo** | SQL Server y SQLite, base vectorial del RAG, motor de voz, almacenamiento institucional |
+| **Entrega** | Código en GitHub → servidor de pruebas → aviso de despliegue → producción |
 
 ---
 
@@ -43,10 +53,10 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 
 | | |
 |:--|:--|
-| **38** | aplicaciones web en producción |
+| **38** | aplicaciones web |
 | **6** | servidores operados |
 | **9** | servicios de datos e inteligencia artificial |
-| **17** | proyectos activos |
+| **17** | proyectos en el portafolio |
 | **12** | repositorios |
 
 </div>
@@ -60,18 +70,22 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 | Proyecto | Descripción |
 |---|---|
 | Portal institucional | Punto de entrada público a los servicios de la facultad |
-| Control escolar | Inscripción, asistencia y evaluación docente |
+| Control escolar | Inscripción, asistencia docente y evaluación |
 | Aspirantes | Proceso de ingreso y admisión |
 | Biblioteca | Consulta de acervos, préstamos y tesis históricas |
+| Constancias | Emisión y validación de constancias |
+| Bolsa de trabajo | Vinculación de egresados con empleadores |
+| Congreso | Plataforma del encuentro académico anual |
 
 ### Plataforma y servicios
 
 | Proyecto | Descripción |
 |---|---|
-| **CALI** | Asistente virtual institucional con búsqueda semántica (RAG) sobre normativa y documentos |
-| Kioscos | Terminales táctiles distribuidos en campus |
-| App móvil | Biblioteca y servicios al estudiante desde el dispositivo |
-| Almacén | ERP de entradas, salidas y control de existencias |
+| **CALI** | Asistente virtual con búsqueda semántica (RAG) sobre normativa y documentos, con voz |
+| Kioscos | Terminales táctiles en campus, incluido el kiosco de biblioteca |
+| App móvil | Servicios al estudiante desde el dispositivo |
+| Almacén | ERP de entradas, salidas y existencias |
+| Mobiliario | Control de activo fijo y mobiliario |
 
 ### Operación
 
@@ -79,7 +93,17 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 |---|---|
 | Bot de operaciones | ChatOps y SecOps, alertas de servicio y despliegue |
 | Monitoreo | Vigilancia de recursos, servicios, puertos y certificados |
-| Congreso | Plataforma del encuentro académico anual |
+
+---
+
+## Hacia dónde vamos
+
+- **Migrar los sistemas heredados a ASP.NET Core / MVC**, empezando por los kioscos y la biblioteca
+- **Un repositorio por sistema**, con historial, revisión de cambios y reversión
+- **Respaldos automatizados y verificados** de bases de datos, base vectorial y configuración
+- **Registros de eventos estandarizados** para diagnosticar incidentes con rapidez
+- **App móvil unificada** para biblioteca, inscripciones y consulta del alumno
+- **Documentación por sistema**, para que el conocimiento no dependa de una sola persona
 
 ---
 
@@ -92,9 +116,9 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 | **Servidor** | Windows Server · IIS |
 | **Aplicaciones** | ASP.NET · ASP.NET Core |
 | **Datos** | SQL Server · SQLite · base vectorial |
-| **IA** | Microservicios de embeddings y clasificación de riesgos |
+| **IA** | Embeddings, RAG y clasificación de riesgos |
 | **Clientes** | React · Node.js |
-| **Operación** | Scripts de PowerShell · alertas en tiempo real |
+| **Operación** | PowerShell · Discord · GitHub |
 
 </div>
 
@@ -104,24 +128,28 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 
 - **Un repositorio por sistema**, con su propio ciclo de vida
 - **Entorno de pruebas dedicado** — nada llega a producción sin validarse antes
-- **Documentación junto al código** — cada sistema explica qué es, dónde vive y qué depende de qué
-- **Cambios registrados** — las alertas de despliegue quedan trazadas
+- **Revisión por pull request** — se trabaja en ramas, no directo sobre `main`
+- **Sin secretos en el código** — credenciales fuera de los repositorios, siempre
+- **Documentación junto al código** — qué es cada sistema, dónde vive y de qué depende
+- **Cambios trazados** — cada despliegue queda registrado
+
+---
+
+## Contacto y reportes
+
+| Necesitas | Cómo |
+|---|---|
+| Reportar una falla o pedir soporte de un sistema | Por los canales institucionales de la facultad, vía [fcav.uat.edu.mx](https://fcav.uat.edu.mx) |
+| Reportar una **vulnerabilidad** | De forma **privada** al área de desarrollo. Ver [SECURITY.md](https://github.com/Desarrollo-de-software-FCAV/.github/blob/main/SECURITY.md). No la publiques en un issue |
+| Colaborar o hacer prácticas con nosotros | Escribe al área de desarrollo a través de la facultad |
+
+Los repositorios de los sistemas son **privados**: contienen la lógica interna de la
+institución. Este perfil es la vitrina pública del área.
 
 ---
 
 <div align="center">
 
-### ¿Consultas o-reportes de un sistema?
-
-Abre un *issue* en el repositorio correspondiente.
-Cada proyecto tiene su propio historial, así que el reporte llega directo a quien lo mantiene.
-
-</div>
-
----
-
-<div align="center">
-
-<sub>Desarrollo de software · Facultad de Contabilidad y Administración</sub>
+<sub>Área de Desarrollo · Facultad de Comercio y Administración Victoria · Universidad Autónoma de Tamaulipas</sub>
 
 </div>
