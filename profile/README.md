@@ -7,7 +7,7 @@ Desarrollo y operación de los sistemas web institucionales
 
 [![Sistemas](https://img.shields.io/badge/sistemas-38-2563eb?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
 [![Servidores](https://img.shields.io/badge/servidores-6-2563eb?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
-[![Repos](https://img.shields.io/badge/repos-13-0ea5e9?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
+[![Repos](https://img.shields.io/badge/repos-12-0ea5e9?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
 
 </div>
 
@@ -47,6 +47,7 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 | **6** | servidores operados |
 | **9** | servicios de datos e inteligencia artificial |
 | **17** | proyectos activos |
+| **12** | repositorios |
 
 </div>
 
@@ -63,7 +64,7 @@ Sin direcciones IP ni nombres de host por razones de seguridad.</sub>
 | Aspirantes | Proceso de ingreso y admisión |
 | Biblioteca | Consulta de acervos, préstamos y tesis históricas |
 
-### Platforma y servicios
+### Plataforma y servicios
 
 | Proyecto | Descripción |
 |---|---|
