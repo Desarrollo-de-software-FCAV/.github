@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" width="980" height="720" role="img" aria-label="Diagrama de la infraestructura del area de desarrollo de FCAV">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="acento" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="fA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="fAi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#14b8a6"/>
+    </marker>
+    <style>
+      .lbl { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+      .tit   { font-size: 16px; font-weight: 700; fill: #f8fafc; }
+      .sub   { font-size: 11.5px; fill: #a8b8cc; }
+      .grp   { font-size: 10.5px; font-weight: 700; fill: #94a3b8; letter-spacing: 1.6px; }
+      .nodo  { font-size: 12.5px; font-weight: 600; fill: #f1f5f9; }
+      .det   { font-size: 10.5px; fill: #b4c2d4; }
+      .crit  { font-size: 10.5px; fill: #fca5a5; font-weight: 600; }
+      .alerta{ font-size: 10.5px; fill: #fcd34d; font-weight: 600; }
+      .leg   { font-size: 10.5px; fill: #cbd5e1; }
+      .bInfra{ fill: #1e293b; stroke: #475569; stroke-width: 1.3; }
+      .bWeb  { fill: #172554; stroke: #3b82f6; stroke-width: 1.5; }
+      .bAi   { fill: #0f2f2b; stroke: #14b8a6; stroke-width: 1.5; }
+      .bDev  { fill: #2e1065; stroke: #a855f7; stroke-width: 1.5; }
+      .bAlerta{fill:#2a1215; stroke:#dc2626; stroke-width:1.5; }
+      .ln    { stroke: #64748b; stroke-width: 1.6; fill: none; }
+      .lnA   { stroke: #3b82f6; stroke-width: 1.7; fill: none; }
+      .lnAi  { stroke: #14b8a6; stroke-width: 1.7; fill: none; }
+      .lnDev { stroke: #a855f7; stroke-width: 1.7; fill: none; }
+      .div   { stroke: #3f5068; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="980" height="720" fill="url(#fondo)" rx="14"/>
+
+  <!-- ENCABEZADO -->
+  <text x="34" y="40" class="lbl tit">Infraestructura · Área de Desarrollo FCAV</text>
+  <text x="34" y="59" class="lbl sub">Arquitectura verificada por inspección directa — 6 servidores · 38 aplicaciones · 9 servicios</text>
+  <rect x="34" y="70" width="132" height="3.5" rx="1.75" fill="url(#acento)"/>
+
+  <!-- ============ COLUMNA 1: CANALES ============ -->
+  <text x="34" y="108" class="lbl grp">CANALES DE ACCESO</text>
+
+  <rect x="34" y="120" width="150" height="62" class="bInfra"/>
+  <text x="109" y="146" class="lbl nodo" text-anchor="middle">Portal web</text>
+  <text x="109" y="165" class="lbl det" text-anchor="middle">estudiantes y personal</text>
+
+  <rect x="34" y="196" width="150" height="62" class="bDev"/>
+  <text x="109" y="222" class="lbl nodo" text-anchor="middle">Kioscos</text>
+  <text x="109" y="241" class="lbl det" text-anchor="middle">terminales táctiles</text>
+
+  <rect x="34" y="272" width="150" height="62" class="bInfra"/>
+  <text x="109" y="298" class="lbl nodo" text-anchor="middle">App móvil</text>
+  <text x="109" y="317" class="lbl det" text-anchor="middle">biblioteca · censo</text>
+
+  <rect x="34" y="348" width="150" height="62" class="bInfra"/>
+  <text x="109" y="374" class="lbl nodo" text-anchor="middle">Discord</text>
+  <text x="109" y="393" class="lbl det" text-anchor="middle">operaciones y alertas</text>
+
+  <!-- ============ COLUMNA 2: PLATAFORMA ============ -->
+  <text x="256" y="108" class="lbl grp">PLATAFORMA DE APLICACIONES</text>
+
+  <rect x="256" y="120" width="330" height="122" class="bWeb"/>
+  <text x="274" y="144" class="lbl nodo">Producción web</text>
+  <text x="274" y="161" class="lbl sub">Windows Server · IIS · 15 aplicaciones</text>
+  <line x1="274" y1="172" x2="568" y2="172" class="div"/>
+  <text x="274" y="191" class="lbl det">Portal institucional · Posgrado · Calendario</text>
+  <text x="274" y="208" class="lbl det">Bolsa de trabajo · Acervo · Prácticas</text>
+  <text x="274" y="225" class="lbl det">Constancias · Congreso · Correo · Admisiones</text>
+
+  <rect x="256" y="256" width="330" height="122" class="bWeb"/>
+  <text x="274" y="280" class="lbl nodo">Intranet y APIs</text>
+  <text x="274" y="297" class="lbl sub">Windows Server · IIS · 23 aplicaciones</text>
+  <line x1="274" y1="308" x2="568" y2="308" class="div"/>
+  <text x="274" y="327" class="lbl det">Biblioteca · Kioscos · Laboratorios</text>
+  <text x="274" y="344" class="lbl det">Almacén · Mobiliario · Aspirantes</text>
+  <text x="274" y="361" class="lbl det">Indicadores · SISLab · Concursos</text>
+
+  <rect x="256" y="392" width="330" height="106" class="bAi"/>
+  <text x="274" y="416" class="lbl nodo">Nodo de inteligencia artificial</text>
+  <text x="274" y="433" class="lbl sub">microservicios nativos · sin servidor web</text>
+  <line x1="274" y1="444" x2="568" y2="444" stroke="#134e4a" stroke-width="1"/>
+  <text x="274" y="464" class="lbl det">Guardrails y clasificación de riesgos</text>
+  <text x="274" y="481" class="lbl det">Embeddings · base vectorial · RAG</text>
+
+  <rect x="256" y="512" width="330" height="82" class="bInfra"/>
+  <text x="274" y="536" class="lbl nodo">Motor de voz (TTS)</text>
+  <text x="274" y="554" class="lbl det">Puente de síntesis entre chatbot y kioscos</text>
+  <text x="274" y="571" class="lbl det">Demostración pública habilitada</text>
+
+  <!-- ============ COLUMNA 3: DATOS Y OPERACION ============ -->
+  <text x="672" y="108" class="lbl grp">DATOS Y OPERACIÓN</text>
+
+  <rect x="672" y="120" width="274" height="86" class="bAlerta"/>
+  <text x="690" y="144" class="lbl nodo">Bases de datos</text>
+  <text x="690" y="163" class="lbl det">SQL Server · SQLite · base vectorial</text>
+  <text x="690" y="182" class="lbl crit">Respaldo: no implementado</text>
+  <text x="690" y="198" class="lbl crit">Prioridad alta del mes</text>
+
+  <rect x="672" y="220" width="274" height="96" class="bInfra"/>
+  <text x="690" y="244" class="lbl nodo">Monitoreo y alertas</text>
+  <text x="690" y="263" class="lbl det">CPU · memoria · disco · servicios</text>
+  <text x="690" y="280" class="lbl det">Caídas de worker · puertos a la escucha</text>
+  <text x="690" y="297" class="lbl det">Autenticación fallida · certificados</text>
+
+  <rect x="672" y="330" width="274" height="78" class="bInfra"/>
+  <text x="690" y="354" class="lbl nodo">Entorno de pruebas</text>
+  <text x="690" y="373" class="lbl det">Servidor dedicado de homologación</text>
+  <text x="690" y="390" class="lbl det">Obligatorio antes de producción</text>
+
+  <rect x="672" y="422" width="274" height="172" class="bInfra"/>
+  <text x="690" y="446" class="lbl grp">ALMACENAMIENTO VERIFICADO</text>
+  <text x="690" y="472" class="lbl det">Producción — sistema</text>
+  <rect x="806" y="462" width="120" height="7" rx="3.5" fill="#334155"/>
+  <rect x="806" y="462" width="73" height="7" rx="3.5" fill="#3b82f6"/>
+  <text x="930" y="470" class="lbl det">61%</text>
+
+  <text x="690" y="496" class="lbl det">Producción — datos</text>
+  <rect x="806" y="486" width="120" height="7" rx="3.5" fill="#334155"/>
+  <rect x="806" y="486" width="64" height="7" rx="3.5" fill="#3b82f6"/>
+  <text x="930" y="494" class="lbl det">53%</text>
+
+  <text x="690" y="520" class="lbl det">Producción — aplicaciones</text>
+  <rect x="806" y="510" width="120" height="7" rx="3.5" fill="#334155"/>
+  <rect x="806" y="510" width="6" height="7" rx="3.5" fill="#3b82f6"/>
+  <text x="930" y="518" class="lbl det">5%</text>
+
+  <text x="690" y="544" class="lbl det">Intranet — datos</text>
+  <rect x="806" y="534" width="120" height="7" rx="3.5" fill="#334155"/>
+  <rect x="806" y="534" width="4" height="7" rx="3.5" fill="#3b82f6"/>
+  <text x="930" y="542" class="lbl det">3%</text>
+
+  <line x1="690" y1="556" x2="928" y2="556" class="div"/>
+  <text x="690" y="578" class="lbl crit">Nodo de IA — 93% usado · crítico</text>
+  <rect x="690" y="584" width="238" height="7" rx="3.5" fill="#334155"/>
+  <rect x="690" y="584" width="221" height="7" rx="3.5" fill="#dc2626"/>
+  <text x="690" y="601" class="lbl alerta">Causa: herramienta de desarrollo local, no los servicios</text>
+
+  <!-- ============ LEYENDA: FRANJA PROPIA ============ -->
+  <rect x="34" y="628" width="912" height="66" rx="10" fill="#16213a" stroke="#334155" stroke-width="1.2"/>
+  <text x="52" y="650" class="lbl grp">LEYENDA</text>
+
+  <rect x="52" y="662" width="13" height="13" rx="3" class="bWeb"/>
+  <text x="74" y="673" class="lbl leg">Aplicación web</text>
+
+  <rect x="176" y="662" width="13" height="13" rx="3" class="bAi"/>
+  <text x="198" y="673" class="lbl leg">Inteligencia artificial</text>
+
+  <rect x="360" y="662" width="13" height="13" rx="3" class="bDev"/>
+  <text x="382" y="673" class="lbl leg">Dispositivo físico</text>
+
+  <rect x="524" y="662" width="13" height="13" rx="3" class="bInfra"/>
+  <text x="546" y="673" class="lbl leg">Infraestructura</text>
+
+  <rect x="664" y="662" width="13" height="13" rx="3" class="bAlerta"/>
+  <text x="686" y="673" class="lbl leg">Riesgo abierto</text>
+
+  <!-- ============ CONEXIONES: carriles separados ============ -->
+  <!-- portal -> produccion (recto) -->
+  <path d="M 184 151 L 250 151" class="lnA" marker-end="url(#fA)"/>
+
+  <!-- kioscos -> intranet: carril mas a la izquierda -->
+  <path d="M 184 227 L 216 227 L 216 300 L 250 300" class="lnDev" marker-end="url(#f)"/>
+
+  <!-- app movil -> intranet: carril intermedio -->
+  <path d="M 184 303 L 232 303 L 232 330 L 250 330" class="lnA" marker-end="url(#fA)"/>
+
+  <!-- discord -> nodo IA -->
+  <path d="M 184 379 L 196 379 L 196 445 L 250 445" class="ln" marker-end="url(#f)"/>
+
+  <!-- produccion -> bases -->
+  <path d="M 586 180 L 640 180 L 640 150 L 666 150" class="ln" marker-end="url(#f)"/>
+
+  <!-- IA -> bases -->
+  <path d="M 586 445 L 652 445 L 652 170 L 666 170" class="lnAi" marker-end="url(#fAi)"/>
+
+  <!-- bases -> (sin respaldo) : linea punteada roja hacia el aviso, dentro de la caja -->
+  <text x="690" y="216" class="lbl crit" font-size="10">▲</text>
+
+  <!-- motor de voz -> kioscos y portal -->
+  <path d="M 256 553 L 240 553 L 240 240 L 190 240" class="ln" marker-end="url(#f)"/>
+
+  <!-- monitoreo -> nodo IA -->
+  <path d="M 672 268 L 616 268 L 616 462 L 592 462" class="ln" stroke-dasharray="6 4" marker-end="url(#f)"/>
+</svg>
