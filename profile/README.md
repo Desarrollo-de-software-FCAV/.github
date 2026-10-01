@@ -7,7 +7,7 @@ Desarrollo, operación y soporte de los sistemas web institucionales
 
 [![Sistemas](https://img.shields.io/badge/sistemas-38-2563eb?style=flat-square)](https://fcav.uat.edu.mx)
 [![Servidores](https://img.shields.io/badge/servidores-6-2563eb?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
-[![Repos](https://img.shields.io/badge/repos-12-0ea5e9?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
+[![Repos](https://img.shields.io/badge/repos-23-0ea5e9?style=flat-square)](https://github.com/Desarrollo-de-software-FCAV)
 [![Sitio](https://img.shields.io/badge/sitio-fcav.uat.edu.mx-14b8a6?style=flat-square)](https://fcav.uat.edu.mx)
 
 </div>
@@ -57,7 +57,7 @@ no se publican direcciones IP, nombres de host ni credenciales. [Ver en vector (
 | **6** | servidores operados |
 | **9** | servicios de datos e inteligencia artificial |
 | **17** | proyectos en el portafolio |
-| **12** | repositorios |
+| **23** | repositorios |
 
 </div>
 
